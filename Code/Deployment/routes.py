@@ -26,19 +26,19 @@ def churnclassify():
     total-charges = request.form.get("total-charges")
     phone-service = request.form.get("phone-service")
     multiple-lines = request.form.get("multiple-lines")
-internet-service = request.form.get("internet-service")
-online-security = request.form.get("online-security")
-online-backup = request.form.get("online-backup")
-device-protection = request.form.get("device-protection")
-tech-support = request.form.get("tech-support")
-streamingTV = request.form.get("streamingTV")
-PaperlessBilling = request.form.get("PaperlessBilling")
-PaymentMethod = request.form.get("PaymentMethod")
-SeniorCitizen = request.form.get("SeniorCitizen")
+    internet-service = request.form.get("internet-service")
+    online-security = request.form.get("online-security")
+    online-backup = request.form.get("online-backup")
+    device-protection = request.form.get("device-protection")
+    tech-support = request.form.get("tech-support")
+    streamingTV = request.form.get("streamingTV")
+    PaperlessBilling = request.form.get("PaperlessBilling")
+    PaymentMethod = request.form.get("PaymentMethod")
+    SeniorCitizen = request.form.get("SeniorCitizen")
 
    #convert data to json
-    input_data = json.dumps({"age": age, "job": job, "marital": marital, "education": education, "default": default, "balance": balance, "housing": housing, "loan": loan})
-
+    input_data = json.dumps({"tenure": tenure, "contract": contract, "gender": gender, "partner": partner, "dependents": dependents, " monthly-charges ": monthly-charges, " total-charges ": total-charges, "phone-service": phone-service, "multiple-lines ": multiple-lines, "internet-service ": internet-service, "online-security ": online-security, "online-backup ": online-backup, "device-protection ": device-protection, "tech-support": tech-support, “streaming-tv": streaming-tv, “StreamingMovies": StreamingMovies, “PaperlessBilling ": PaperlessBilling, “PaymentMethod”: PaymentMethod, “SeniorCitizen”: SeniorCitizen})
+                                 
     #url for churn predictor model
     #url = "http://localhost:5000/api"
     url = "https://churn-model-app.herokuapp.com/api"
